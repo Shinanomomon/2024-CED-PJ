@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Complaint History</title>
+  </head>
+  <body>
+    <h1>ประวัติคำร้องของคุณ</h1>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>หัวข้อ</th>
+        <th>รายละเอียด</th>
+        <th>สถานะ</th>
+        <th>วันที่สร้าง</th>
+      </tr>
+      <% complaints.forEach((c) => { %>
+      <tr>
+        <td><%= c.id %></td>
+        <td><%= c.subject %></td>
+        <td><%= c.detail %></td>
+        <td><%= c.status %></td>
+        <td><%= c.created_at %></td>
+      </tr>
+      <% }) %>
+    </table>
+
+    <p><a href="/home">กลับหน้าหลัก</a></p>
+  </body>
+</html>
